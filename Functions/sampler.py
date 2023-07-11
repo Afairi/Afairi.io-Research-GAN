@@ -9,10 +9,10 @@ import numpy as np
 
 from torch.autograd.variable import Variable
 
-from Functions.original.methods.general.generator import Generator
+from Functions.rcamino_functions.methods.general.generator import Generator
 
-from Functions.original.utils.commandline import parse_int_list
-from Functions.original.utils.cuda import to_cuda_if_available, to_cpu_if_available, load_without_cuda
+from Functions.rcamino_functions.utils.commandline import parse_int_list
+from Functions.rcamino_functions.utils.cuda import to_cuda_if_available, to_cpu_if_available, load_without_cuda
 
 
 def sample(generator, num_samples, num_features, batch_size=10000, noise_size=128):

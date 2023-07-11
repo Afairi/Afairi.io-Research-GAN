@@ -7,23 +7,21 @@ import torch
 import xgboost as xgb
 
 import numpy as np
-from matplotlib import pyplot as plt
 from sklearn.metrics import mean_absolute_error, mean_squared_error
 from torch.autograd.variable import Variable
 from torch.optim import Adam
 
 from Functions import metrics
-from Functions.original.datasets.dataset import Dataset
-from Functions.original.methods.general.discriminator import Discriminator
-from Functions.original.methods.general.generator import Generator
-from Functions.original.methods.general.wgan_gp import calculate_gradient_penalty
+from Functions.rcamino_functions.datasets.dataset import Dataset
+from Functions.rcamino_functions.methods.general.discriminator import Discriminator
+from Functions.rcamino_functions.methods.general.generator import Generator
+from Functions.rcamino_functions.methods.general.wgan_gp import calculate_gradient_penalty
 
-from Functions.original.utils.commandline import parse_int_list
-from Functions.original.utils.cuda import to_cuda_if_available, to_cpu_if_available
-from Functions.original.utils.initialization import load_or_initialize
-from Functions.original.utils.logger import Logger
+from Functions.rcamino_functions.utils.cuda import to_cuda_if_available, to_cpu_if_available
+from Functions.rcamino_functions.utils.initialization import load_or_initialize
+from Functions.rcamino_functions.utils.logger import Logger
 import config.config as cc
-from sampler import sample
+from Functions.sampler import sample
 
 debugcycle = False
 def run_regression(train, test, specific):

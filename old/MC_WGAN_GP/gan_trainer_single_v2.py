@@ -25,7 +25,7 @@ from patsy import dmatrices
 
 ## Import created modules
 from gan_scripts.gradiant_penalty import calculate_gradient_penalty
-from Functions.original.utils.undo_dummy import back_from_dummies
+from Functions.rcamino_functions.utils.undo_dummy import back_from_dummies
 
 
 # Sets the number of cores used on the server
@@ -51,10 +51,10 @@ cont_vars = policy1[['DriverAge']]
 cont_vars2 = (cont_vars - np.mean(cont_vars))/np.std(cont_vars)
 pol_dat = pd.concat([cont_vars2.reset_index(drop=True), policy_cat], axis=1)
 
-# Take a sample from the original data for faster training
+# Take a sample from the rcamino_functions data for faster training
 pol_dat = pol_dat.sample(n = 10000, random_state = 12)
 
-# Fit a poisson model for the original data
+# Fit a poisson model for the rcamino_functions data
 td = back_from_dummies(pol_dat)
 td['ClaimNb'] = td['ClaimNb'].astype('int')
 y_real, X_real = dmatrices('ClaimNb ~ DensityCat + DriverAge',

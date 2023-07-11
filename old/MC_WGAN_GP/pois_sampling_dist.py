@@ -28,7 +28,7 @@ from patsy import dmatrices
 pd.set_option('display.float_format', lambda x: '%.3f' % x)
 
 ## Import created modules
-from Functions.original.utils.undo_dummy import back_from_dummies
+from Functions.rcamino_functions.utils.undo_dummy import back_from_dummies
 
 
 # Sets the number of cores used on the server

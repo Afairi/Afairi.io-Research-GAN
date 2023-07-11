@@ -1,12 +1,10 @@
 import pickle
-
-import joblib
 import pandas as pd
 from sklearn.datasets import fetch_openml
 
-from _1_DataPrep import CommonPrep, SpecificPrep
+from Functions.dataprep import CommonPrep, SpecificPrep
 import config.config as cc
-from trainer import run_training
+from Functions.trainer import run_training
 
 
 def main():

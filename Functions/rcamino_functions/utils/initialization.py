@@ -1,6 +1,6 @@
 import torch.nn as nn
 
-from Functions.original.utils.cuda import load_without_cuda
+from Functions.rcamino_functions.utils.cuda import load_without_cuda
 
 
 def initialize_weights(module):

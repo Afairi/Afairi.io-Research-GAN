@@ -11,7 +11,7 @@ import torch.nn as nn
 import torch
 import numpy as np
 import pandas as pd
-from Functions.original.utils.undo_dummy import back_from_dummies
+from Functions.rcamino_functions.utils.undo_dummy import back_from_dummies
 from patsy import dmatrices
 
 input_size = data_size               # Number of columns in data

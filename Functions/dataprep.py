@@ -5,7 +5,7 @@ from sklearn.base import TransformerMixin
 from sklearn.model_selection import GroupShuffleSplit
 from sklearn.preprocessing import StandardScaler
 
-from Functions.original.utils.undo_dummy import back_from_dummies
+from Functions.rcamino_functions.utils.undo_dummy import back_from_dummies
 import config.config as cc
 
 import pandas as pd
